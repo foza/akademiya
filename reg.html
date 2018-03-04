@@ -18,15 +18,20 @@
     <link type="text/css" rel="stylesheet" href="assets/css/theme-default/font-awesome.min.css?1422529194"/>
     <link type="text/css" rel="stylesheet"
           href="assets/css/theme-default/material-design-iconic-font.min.css?1421434286"/>
-    <!-- END STYLESHEETS -->
+
+    <link type="text/css" rel="stylesheet" href="assets/css/theme-default/libs/bootstrap-datepicker/datepicker3.css?1424887858" />
+    <link type="text/css" rel="stylesheet" href="assets/css/theme-default/libs/select2/select2.css?1424887856" />
+    <link type="text/css" rel="stylesheet" href="assets/css/theme-default/libs/multi-select/multi-select.css?1424887857" />
+      <!-- END STYLESHEETS -->
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script type="text/javascript" src="assets/js/libs/utils/html5shiv.js?1403934957"></script>
     <script type="text/javascript" src="assets/js/libs/utils/respond.min.js?1403934956"></script>
     <![endif]-->
+
 </head>
-<body style="background:url('assets/img/02.jpg');background-position:top center;background-repeat: no-repeat; background-size:cover ;">
+<body style="background:url('assets/img/02.jpg');background-position:top center;background-repeat: no-repeat;  background-attachment: fixed;">
 <div class="row">
     <div style="padding: 14px; text-align: center">
         <img src="assets/img/gerb.png" style="width: 158px;">
@@ -39,29 +44,150 @@
                     <header>Регистрация</header>
                 </div>
                 <div class="card-body floating-label">
-                    <div>
-                        <label class="radio-inline radio-styled">
-                            <input type="radio" name="gendre"><span>Male</span>
-                        </label>
-                        <label class="radio-inline radio-styled">
-                            <input type="radio" name="gendre" checked=""><span>Female</span>
-                        </label>
-                    </div>
-                    <br>
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="Firstname2">
+                                <input type="text" class="form-control" id="Firstname2" required>
                                 <label for="Firstname2">Имя*</label>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="Lastname2">
+                                <input type="text" class="form-control" id="Lastname2" required>
                                 <label for="Lastname2">Фамилия*</label>
                             </div>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="thirdname2">
+                        <label for="thirdname2">Отчество:</label>
+                    </div>
+                    <div>
+                        <label class="radio-inline radio-styled">
+                            <input type="radio" name="gendre"  checked=""><span>Мужской</span>
+                        </label>
+                        <label class="radio-inline radio-styled">
+                            <input type="radio" name="gendre"><span>Женский</span>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group control-width-normal">
+                            <div class="input-group date" id="demo-date" data-provide="datepicker">
+                                <div class="input-group-content">
+                                    <input type="text" class="form-control" required>
+                                    <label>Дата рождения*</label>
+                                </div>
+                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div clas="col-md-12">
+                            <div class="form-group">
+                                <label>Место рождения</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Регион</label>
+                                <select class="form-control select2-list" data-placeholder="Select an item">
+                                    <option value="">Выберите "Регион"</option>
+                                    <option value="1726">г. Ташкент</option>
+                                    <option value="1735">Республика Каракалпакстан</option>
+                                    <option value="1703">Андижанская область</option>
+                                    <option value="1706">Бухарская область</option>
+                                    <option value="1708">Джизакская область</option>
+                                    <option value="1712">Навоийская область</option>
+                                    <option value="1710">Кашкадарьинская область</option>
+                                    <option value="1714">Наманганская область</option>
+                                    <option value="1718">Самаркандская область</option>
+                                    <option value="1724">Сырдарьинская область</option>
+                                    <option value="1727">Ташкентская область</option>
+                                    <option value="1730">Ферганская область</option>
+                                    <option value="1733">Хорезмская область</option>
+                                    <option value="1722">Сурхандарьинская область</option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Город</label>
+                                <select class="form-control select2-list" data-placeholder="Select an item" disabled>
+                                    <option value="">Выберите "Район (город)"</option>
+                                    <option value="1726280">Алмазарский район</option>
+                                    <option value="1726264">Бектемирский район</option>
+                                    <option value="1726273">Мирабадский район</option>
+                                    <option value="1726269">Мирзо-Улугбекский район</option>
+                                    <option value="1726283">Сергелийский район</option>
+                                    <option value="1726262">Учтепинский район</option>
+                                    <option value="1726294">Чиланзарский район</option>
+                                    <option value="1726277">Шайхантахурский район</option>
+                                    <option value="1726266">Юнусабадский район</option>
+                                    <option value="1726287">Яккасарайский район</option>
+                                    <option value="1726290">Яшнабадский район</option>
+                                </select>
+
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="Email" required>
+                                <label for="Email">Email*</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="phone" required>
+                                <label for="phone">Мобильный телефон*</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="inn" required>
+                                <label for="inn">INN*</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="inps" required>
+                                <label for="inps">INPS*</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Select with option filtering</label>
+                        <select class="form-control select2-list" data-placeholder="Select an item">
+                            <option value="">Министерства</option>
+                            <option value="">Государственные комитеты</option>
+                            <option value="">Государственные инспекции</option>
+                            <option value="">Агентства</option>
+                            <option value="">Комитеты</option>
+                            <option value="">Центры</option>
+                            <option value="">Центральные учреждения</option>
+                        </select>
+
+                    </div>
+                    <div class="form-group">
+                        <label>Multi-Value select</label>
+                        <select class="form-control select2-list" data-placeholder="Select an item">
+                            <option value="">Министерство экономики Республики Узбекистан</option>
+                            <option value="">Министерство финансов Республики Узбекистан</option>
+                            <option value="">Министерство сельского и водного хозяйства Республики Узбекистан</option>
+                            <option value="">Министерство занятости и трудовых отношений Республики Узбекистан</option>
+                            <option value="">Министерство высшего и среднего специального образования Республики Узбекистан</option>
+                        </select>
+
+                    </div>
+
+
                     <div class="form-group">
                         <input type="text" class="form-control" id="Username2">
                         <label for="Username2">Username</label>
@@ -72,18 +198,17 @@
                     </div>
                     <div class="checkbox checkbox-styled">
                         <label>
-                            <input type="checkbox" value="">
-                            <span>Send me weekly updates</span>
+                            <input type="checkbox" value="" required>
+                            <span>Я согласен со всеми правилами</span>
                         </label>
                     </div>
                 </div><!--end .card-body -->
                 <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                        <button type="submit" class="btn btn-flat btn-primary ink-reaction">Create account</button>
+                        <button type="submit" class="btn btn-flat btn-primary ink-reaction">Отправить</button>
                     </div>
                 </div>
             </div><!--end .card -->
-            <em class="text-caption">Vertical layout with floating labels</em>
         </form>
     </div>
 
@@ -93,6 +218,11 @@
 <!-- BEGIN JAVASCRIPT -->
 <script src="assets/js/libs/jquery/jquery-1.11.2.min.js"></script>
 <script src="assets/js/libs/jquery/jquery-migrate-1.2.1.min.js"></script>
+<script src="assets/js/libs/jquery-ui/jquery-ui.min.js"></script>
+<script src="assets/js/libs/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+<script src="assets/js/libs/select2/select2.min.js"></script>
+<script src="assets/js/libs/multi-select/jquery.multi-select.js"></script>
+<script src="assets/js/libs/jquery.maskedinput.min.js"></script>
 <script src="assets/js/libs/bootstrap/bootstrap.min.js"></script>
 <script src="assets/js/libs/spin.js/spin.min.js"></script>
 <script src="assets/js/libs/autosize/jquery.autosize.min.js"></script>
@@ -106,6 +236,8 @@
 <script src="assets/js/core/source/AppVendor.js"></script>
 <script src="assets/js/core/demo/Demo.js"></script>
 <!-- END JAVASCRIPT -->
-
+<script>
+    $("#phone").mask("(99) 999-99-99");
+</script>
 </body>
 </html>
